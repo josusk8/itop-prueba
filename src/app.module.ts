@@ -14,7 +14,7 @@ import { Task } from './tasks/entities/task.entity';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      typePaths: ['../src/schema/graphql'],
     }),
     UsersModule,
     TasksModule,
